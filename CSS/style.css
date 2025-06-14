@@ -1,0 +1,373 @@
+:root {
+  --Montserrat-font: "Montserrat", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--Montserrat-font);
+}
+
+header {
+  background-image: url(../imgs/bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header .layer {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+header .layer .social-icons a {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+header .layer h5 {
+  font-family: var(--Montserrat-font);
+  font-size: 3.125rem;
+  font-weight: 800;
+}
+
+header .layer h1 {
+  font-family: var(--Montserrat-font);
+  font-size: 3.75rem;
+  font-weight: 200;
+}
+
+/* ====== Navbar Styling ====== */
+nav.navbar {
+  background-color: transparent;
+  transition: background-color 0.4s, box-shadow 0.4s;
+}
+
+nav .navbar-brand {
+  font-family: var(--Montserrat-font);
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: white;
+  transition: color 0.3s;
+}
+
+.navbar .navbar-nav .nav-link {
+  position: relative;
+  color: white;
+  font-size: 14px;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.navbar .navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transition: width 0.4s ease-in-out, background-color 0.4s;
+}
+
+.navbar .navbar-nav .nav-link.active::before {
+  width: 90%;
+  visibility: visible;
+}
+
+/* After Scroll */
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .navbar-brand,
+.navbar.scrolled .nav-link {
+  color: black !important;
+}
+
+.navbar.scrolled .nav-link.active::before {
+  background-color: black;
+}
+
+/* ===== Other Sections Styling (No Change) ===== */
+
+.progress {
+  height: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.about button.bg-dark {
+  transition: all 0.5s ease;
+}
+.about button.bg-dark:hover {
+  background-color: #fff !important;
+  color: black !important;
+}
+.about button.bg-white {
+  transition: all 0.5s ease;
+}
+.about button.bg-white:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+.border-dotted {
+  position: absolute;
+  top: 20%;
+  right: 30%;
+  width: 75%;
+  height: 90%;
+  border: 2px dotted rgba(118, 117, 117, 0.6);
+  border-radius: 10px;
+  z-index: -1;
+}
+.services {
+  background-color: #f1f1f1;
+  border-bottom: 2px dotted lightgray;
+}
+.services h2 {
+  font-family: var(--Montserrat-font);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.services .card p {
+  max-width: 400px;
+  word-spacing: 3px;
+}
+.custom-card {
+  border: 1px solid #dee2e6;
+  background-color: white;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+.custom-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.icon-stack i.fa-circle {
+  color: #f4f4f4;
+  transition: color 0.3s ease;
+}
+.custom-card:hover .icon-stack i.fa-circle {
+  color: black;
+}
+.icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background-color: #f4f4f4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+.icon-wrapper i {
+  font-size: 25px;
+  color: black;
+  transition: 0.3s ease;
+}
+.custom-card:hover .icon-wrapper {
+  background-color: black;
+}
+.custom-card:hover .icon-wrapper i {
+  color: white;
+}
+.section-title {
+  position: relative;
+  padding-bottom: 2px;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 150px;
+  border-bottom: 2px dotted #cdd2d9;
+}
+.portfolio h2 {
+  font-family: var(--Montserrat-font);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.portfolio .layer-white {
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.portfolio .inner:hover .layer-white {
+  opacity: 1;
+}
+.portfolio .icons i {
+  background-color: black;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: px;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+.portfolio .icons i:hover {
+  background-color: white;
+  color: black;
+}
+.portfolio .nav-pills {
+  justify-content: center;
+}
+.portfolio .nav-pills .nav-link {
+  border-radius: 50px;
+  color: #000;
+  font-weight: 500;
+  padding: 0.4rem 1.5rem;
+  background-color: transparent;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+.portfolio .nav-pills .nav-link.active {
+  background-color: #000;
+  color: #fff;
+}
+.testmonials {
+  background-color: #f7f7f7;
+}
+.testmonials h2 {
+  font-family: var(--Montserrat-font);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.testmonials p {
+  max-width: 900px;
+  color: rgb(116, 129, 130);
+  font-size: 0.9375rem;
+}
+.testmonials img {
+  width: 100px;
+  height: 100px;
+}
+.testmonials span {
+  color: rgb(136, 136, 136);
+  font-size: 0.75rem;
+}
+.testmonials .carousel-indicators button {
+  background-color: #bbb;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+}
+.testmonials .carousel-indicators .active {
+  background-color: #4d4c4c;
+}
+.counters h3 {
+  font-family: var(--Montserrat-font);
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+.counters p {
+  color: rgb(116, 129, 130);
+  font-size: 0.9375rem;
+}
+.team .section-title {
+  font-family: var(--Montserrat-font);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.team .team-member {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #5b5b5b;
+}
+.team .team-img {
+  position: relative;
+  overflow: hidden;
+}
+.team .team-img img {
+  transition: transform 0.5s ease;
+}
+.team .team-member:hover .team-img img {
+  transform: scale(1.2);
+}
+.team .team-layer {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 2;
+  overflow: hidden;
+  padding: 5px;
+  transform: rotateY(0deg);
+}
+.team .team-member:hover .team-layer {
+  transform: rotateY(360deg);
+  opacity: 1;
+}
+.team .social-icons a {
+  background-color: #000;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease;
+}
+.team .team-member:hover .social-icons a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.team .social-icons a:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+.contact .section-title {
+  font-family: var(--Montserrat-font);
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+.contact .info-item {
+  padding: 30px 10px;
+  transition: all 0.4s ease;
+}
+.contact .info-item i {
+  font-size: 25px;
+  color: black;
+  transition: all 0.3s ease;
+  background-color: #f4f4f4;
+  width: 60px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.contact .info-item:hover i {
+  background-color: black;
+  color: white;
+}
+.contact input,
+.contact textarea {
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px 15px;
+}
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  box-shadow: none;
+  background-color: #eee;
+}
+.footer {
+  color: #748182;
+  font-size: 0.875rem;
+}
